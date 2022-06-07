@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.serhii_romanchuk.a30_dayschallenge.ChallengeDayFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/formConstraintLayout"
+        style="@style/Form"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/nameExerciseTextView"
+            style="@style/TextTitleStyle"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ПРИСІДАННЯ З ВАГОЮ" />
+
+        <TextView
+            style="@style/AccentNumberTextStyle"
+            android:id="@+id/repsPerDayTextView"
+            android:layout_marginTop="20dp"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toStartOf="@+id/numberOfRepsTextView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameExerciseTextView"
+            tools:text="156" />
+
+        <TextView
+            style="@style/RegularNumberTextStyle"
+            android:id="@+id/numberOfRepsTextView"
+            android:layout_marginStart="6dp"
+            android:textSize="34sp"
+            app:layout_constraintBaseline_toBaselineOf="@id/repsPerDayTextView"
+            app:layout_constraintBottom_toBottomOf="@+id/repsPerDayTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/repsPerDayTextView"
+            app:layout_constraintTop_toBottomOf="@+id/nameExerciseTextView"
+            tools:text="/333" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:progressDrawable="@drawable/custom_progress_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repsPerDayTextView" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/saveDayButton"
+        style="@style/Button"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/end_the_day"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <ImageView
+        android:id="@+id/minusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintBottom_toTopOf="@+id/backButton"
+        app:layout_constraintEnd_toStartOf="@+id/countRepsTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/titleCountRepsTextView" />
+
+    <ImageView
+        android:id="@+id/plusImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/ic_plus"
+        app:layout_constraintBottom_toBottomOf="@+id/minusImageView"
+        app:layout_constraintEnd_toStartOf="@+id/okImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/countRepsTextView"
+        app:layout_constraintTop_toTopOf="@+id/minusImageView" />
+
+    <ImageView
+        android:id="@+id/okImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_ok"
+        app:layout_constraintBottom_toBottomOf="@+id/plusImageView"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintStart_toEndOf="@+id/plusImageView"
+        app:layout_constraintTop_toTopOf="@+id/plusImageView" />
+
+    <TextView
+        android:id="@+id/countRepsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/open_sans"
+        android:text="10"
+        android:textColor="@color/secondary_cream"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/minusImageView"
+        app:layout_constraintEnd_toStartOf="@+id/plusImageView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/minusImageView"
+        app:layout_constraintTop_toTopOf="@+id/minusImageView" />
+
+
+    <TextView
+        android:id="@+id/titleCountRepsTextView"
+        style="@style/TextTitleStyle"
+        android:layout_marginBottom="16dp"
+        android:text="@string/title_number_of_reps"
+        app:layout_constraintBottom_toTopOf="@+id/minusImageView"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/formConstraintLayout"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/backButton"
+        style="@style/Button"
+        android:layout_marginBottom="16dp"
+        android:text="@string/back_to_challenge"
+        android:textColor="@color/secondary_cream"
+        android:background="@drawable/second_button_background"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toTopOf="@+id/saveDayButton"
+        app:layout_constraintEnd_toStartOf="@+id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/startGuideline" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

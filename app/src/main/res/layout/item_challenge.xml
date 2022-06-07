@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Form"
+    android:layout_width="match_parent"
+    android:layout_marginTop="32dp">
+
+    <TextView
+        android:id="@+id/repsDoneTextView"
+        style="@style/AccentNumberTextStyle"
+        android:textSize="28sp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="8599" />
+
+    <TextView
+        android:id="@+id/numberOfRepsTextView"
+        style="@style/RegularNumberTextStyle"
+        android:layout_marginStart="4dp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/repsDoneTextView"
+        app:layout_constraintStart_toEndOf="@id/repsDoneTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="/10 000" />
+
+    <TextView
+        android:id="@+id/dayTextView"
+        style="@style/TextTitleStyle"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="@+id/titleTextView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        tools:text="24-ий день" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/TextTitleStyle"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/dayTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberOfRepsTextView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="ПРИСІДАННЯ З ВАГОЮ" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/custom_progress_bg"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/moreImageViewButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/repsDoneTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/repsDoneTextView"
+        app:srcCompat="@drawable/ic_more" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

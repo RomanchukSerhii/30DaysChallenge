@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.serhii_romanchuk.a30_dayschallenge.NewChallengeFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNameExercise"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="@string/name_exercise"
+        android:textColorHint="@color/hint_color"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/secondary_cream"
+        app:boxStrokeColor="@color/primary_orange"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameExerciseEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_cream"
+            android:textSize="16sp"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            android:fontFamily="@font/open_sans"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilQuantityPerMonth"
+        style="@style/MyDropDownMenu"
+        android:hint="@string/quantity_per_month"
+        app:endIconTint="@color/secondary_cream"
+        app:boxStrokeColor="@color/primary_orange"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintTop_toBottomOf="@id/tilNameExercise">
+
+        <AutoCompleteTextView
+            style="@style/AutoComplete"
+            android:id="@+id/numberOfRepsAutoComplete"
+            android:text="@string/_3_000"
+            tools:ignore="LabelFor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilMode"
+        style="@style/MyDropDownMenu"
+        android:hint="@string/mode"
+        app:endIconTint="@color/secondary_cream"
+        app:boxStrokeColor="@color/primary_orange"
+        app:layout_constraintStart_toEndOf="@id/startGuideline"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintTop_toBottomOf="@id/tilQuantityPerMonth">
+
+        <AutoCompleteTextView
+            style="@style/AutoComplete"
+            android:id="@+id/modeAutoComplete"
+            android:text="@string/normal"
+            tools:ignore="LabelFor"            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/saveSettingsButton"
+        style="@style/Button"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/save"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/endGuideline"
+        app:layout_constraintStart_toEndOf="@id/startGuideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

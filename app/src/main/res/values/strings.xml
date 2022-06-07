@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">30-Days Challenge</string>
+    <string name="add_challenge">ДОДАТИ ЧЕЛЕНДЖ</string>
+    <string name="add_challenge_button">add challenge button</string>
+    <string name="save">Зберегти</string>
+    <string name="name_exercise">Назва вправи</string>
+    <string name="quantity_per_month">Місячна кількість разів</string>
+    <string name="_3_000">3 000</string>
+    <string name="mode">Режим</string>
+    <string name="normal">Звичайний</string>
+    <string name="end_the_day">ЗАВЕРШИТИ ДЕНЬ</string>
+    <string name="toast_reps_must_be_positive">Кількість повторювань має бути більше 0</string>
+    <string name="number_of_reps">/%1$s</string>
+    <string name="day_of_challenge">%1$d-ий день</string>
+    <string name="move_up">Перемістити в гору</string>
+    <string name="move_down">Перемістити в низ</string>
+    <string name="remove">Видалити</string>
+    <string name="main_fragment_label">30 Днів Челендж</string>
+    <string name="new_challenge_fragment_label">Новий Челендж</string>
+    <string name="back_to_challenge">Назад до випробувань</string>
+    <string name="title_number_of_reps">КІЛЬКІСТЬ ПОВТОРЕНЬ</string>
+    <string-array name="quantity_array">
+        <item>3 000</item>
+        <item>5 000</item>
+        <item>10 000</item>
+    </string-array>
+    <string-array name="mode">
+        <item>Звичайний</item>
+        <item>Наростаючий</item>
+    </string-array>
+</resources>
